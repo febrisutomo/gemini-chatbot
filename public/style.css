@@ -1,0 +1,164 @@
+/* public/style.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    background: #121212; /* Latar belakang lebih gelap */
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chat-container {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.card {
+    height: 600px;
+    border-radius: 15px !important;
+    background: #1e1e1e !important; /* Warna card sedikit lebih terang */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    border: 1px solid #333 !important;
+}
+
+.msg_head {
+    position: relative;
+    background-color: #1e1e1e !important;
+    border-bottom: 1px solid #333 !important;
+    color: #fff;
+    border-radius: 15px 15px 0 0 !important;
+    padding: 15px;
+}
+
+/* BARU: Styling untuk ikon AI di header */
+.ai-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em; /* Ukuran ikon */
+    margin-right: 15px;
+    color: #00aaff; /* Warna neon biru */
+}
+
+.user_info {
+    margin-left: 0;
+}
+
+.user_info span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+.user_info p {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.msg_card_body {
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.msg_cotainer {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    border-radius: 20px;
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 10px 15px;
+    position: relative;
+    max-width: 80%;
+    word-break: break-word;
+}
+
+.msg_cotainer_send {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #007bff, #00aaff); /* Gradien biru */
+    color: #fff;
+    padding: 10px 15px;
+    position: relative;
+    max-width: 80%;
+    word-break: break-word;
+}
+
+.card-footer {
+    border-radius: 0 0 15px 15px !important;
+    border-top: 1px solid #333 !important;
+    background-color: #1e1e1e !important;
+    padding: 10px 15px;
+}
+
+.type_msg {
+    background-color: #2c2c2c !important;
+    border: 1px solid #444 !important;
+    color: #e0e0e0 !important;
+    height: 48px !important;
+    overflow-y: auto;
+    border-radius: 24px !important; /* Input lebih bulat */
+    padding-left: 20px;
+}
+
+.type_msg:focus {
+    box-shadow: 0 0 0 2px rgba(0, 170, 255, 0.5) !important;
+    outline: none !important;
+    border-color: #00aaff !important;
+}
+
+/* BARU: Memperbaiki visibilitas placeholder */
+.type_msg::placeholder {
+    color: #777 !important;
+    opacity: 1; /* Firefox */
+}
+
+.type_msg::-ms-input-placeholder { /* Edge */
+    color: #777 !important;
+}
+
+.chat-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.send_btn {
+    border-radius: 50% !important; /* Tombol bulat */
+    background-color: #00aaff !important;
+    border: 0 !important;
+    color: white !important;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Mencegah tombol menyusut */
+}
+
+.send_btn:hover {
+    background-color: #007bff !important;
+}
+
+/* Scrollbar styling untuk Chrome/Safari */
+.msg_card_body::-webkit-scrollbar {
+  width: 8px;
+}
+.msg_card_body::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+.msg_card_body::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 20px;
+  border: 2px solid #1e1e1e;
+}
+
+/* Styling untuk elemen Markdown */
+.msg_cotainer a { color: #64b5f6; text-decoration: none; }
+.msg_cotainer a:hover { text-decoration: underline; }
+.msg_cotainer pre { background-color: #121212; color: #f0f0f0; padding: 10px; border-radius: 8px; overflow: auto; font-size: 0.9em; border: 1px solid #444; }
+.msg_cotainer code { font-family: 'Fira Code', 'Courier New', monospace; color: #80cbc4; }
+.msg_cotainer blockquote { border-left: 4px solid #555; margin-left: 0; padding-left: 15px; font-style: italic; color: #aaa; }
